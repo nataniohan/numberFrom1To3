@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <p style=" background:#00FA9A; font-family: Gill Sans;font-size: 40px;">adivinhe o numero e 1 a 3</p>
+        <button onclick="numero()">clique aqui</button>
+        <script>
+            function numero(){
+                var numero =  Math.ceil( Math.random()*3)
+                 let ver = prompt('digite o numero')
+                if(ver <= 0 )
+                { alert('numero invalido')} 
+                else if(ver >= 4){
+                    alert('numero invalido')
+                }
+                else if(ver < numero){
+                    alert('esta frio')
+                }
+                else if(ver > numero){
+                    alert('esta quente')
+                }
+                else{alert('voce acertou')}
+                }
+        </script>
+    </body>
+</html>
