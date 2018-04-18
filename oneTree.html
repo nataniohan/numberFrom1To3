@@ -5,22 +5,28 @@
         <p style=" background:#00FA9A; font-family: Gill Sans;font-size: 40px;">adivinhe o numero e 1 a 3</p>
         <button onclick="numero()">clique aqui</button>
         <script>
+            var numeroUm =  Math.ceil( Math.random()*3)
             function numero(){
-                var numero =  Math.ceil( Math.random()*3)
-                 let ver = prompt('digite o numero')
+                do{
+                let ver = prompt('digite o numero')
+                let comprova = false
                 if(ver <= 0 )
                 { alert('numero invalido')} 
                 else if(ver >= 4){
                     alert('numero invalido')
                 }
-                else if(ver < numero){
+                else if(ver < numeroUm){
                     alert('esta frio')
                 }
-                else if(ver > numero){
+                else if(ver > numeroUm){
                     alert('esta quente')
                 }
-                else{alert('voce acertou')}
-                }
+                else{alert('voce acertou')
+                     comprova = true 
+                     document.getElementById('identifica').innerHTML = 'voce acertou cara !!'}
+                }while(comprova != true)
+            }     
         </script>
+        <p id='identifica' style="font-size: 20px; color: green"></p>
     </body>
 </html>
